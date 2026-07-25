@@ -1,6 +1,10 @@
 body{
 
-background:#202124;
+margin:0;
+
+background:#1d1f27;
+
+font-family:Arial;
 
 display:flex;
 
@@ -10,25 +14,35 @@ align-items:center;
 
 height:100vh;
 
-font-family:Arial;
-
-margin:0;
-
 }
 
 .card{
 
+width:360px;
+
 background:white;
 
-padding:40px;
+padding:30px;
 
 border-radius:20px;
 
-width:350px;
-
 text-align:center;
 
-box-shadow:0 10px 30px rgba(0,0,0,.3);
+box-shadow:0px 10px 30px rgba(0,0,0,.4);
+
+}
+
+#zone{
+
+width:250px;
+
+height:250px;
+
+margin:auto;
+
+background:#ececec;
+
+border-radius:50%;
 
 }
 
@@ -38,16 +52,12 @@ margin-top:0;
 
 }
 
-input{
-
-width:100%;
-
-}
-
 h2{
 
-font-size:50px;
+font-size:60px;
 
 color:#1976D2;
+
+margin:20px;
 
 }
