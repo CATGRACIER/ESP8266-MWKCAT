@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>ESP8266 Servo Remote</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CAT Servo Control</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<h1>Hello GitHub Pages!</h1>
+<div class="card">
 
-<p>เว็บนี้ออนไลน์แล้ว</p>
+<h1>CAT Servo Control</h1>
+
+<p>Speed</p>
+
+<input
+type="range"
+min="0"
+max="180"
+value="90"
+id="slider">
+
+<h2 id="value">90</h2>
+
+</div>
+
+<script type="module" src="script.js"></script>
 
 </body>
+
 </html>
