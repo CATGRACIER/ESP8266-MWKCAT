@@ -1,8 +1,63 @@
-const slider=document.getElementById("slider");
-const value=document.getElementById("value");
+body{
 
-slider.oninput=()=>{
+margin:0;
 
-value.innerHTML=slider.value;
+background:#1d1f27;
+
+font-family:Arial;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+}
+
+.card{
+
+width:360px;
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0px 10px 30px rgba(0,0,0,.4);
+
+}
+
+#zone{
+
+width:250px;
+
+height:250px;
+
+margin:auto;
+
+background:#ececec;
+
+border-radius:50%;
+
+}
+
+h1{
+
+margin-top:0;
+
+}
+
+h2{
+
+font-size:60px;
+
+color:#1976D2;
+
+margin:20px;
 
 }
