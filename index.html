@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>CAT Servo Control</title>
+<title>CAT Servo Controller</title>
 
 <link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/nipplejs@0.10.2/dist/nipplejs.min.js"></script>
 
 </head>
 
@@ -16,22 +18,17 @@
 
 <div class="card">
 
-<h1>CAT Servo Control</h1>
+<h1>CAT Servo Controller</h1>
 
-<p>Speed</p>
+<div id="zone"></div>
 
-<input
-type="range"
-min="0"
-max="180"
-value="90"
-id="slider">
+<h2 id="speed">0</h2>
 
-<h2 id="value">90</h2>
+<p>Move joystick left/right</p>
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/nipplejs@0.10.2/dist/nipplejs.min.js"></script>
+<script type="module" src="script.js"></script>
 
 </body>
 
