@@ -1,63 +1,71 @@
-body{
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 
-margin:0;
+import {
 
-background:#1d1f27;
+getDatabase,
 
-font-family:Arial;
+ref,
 
-display:flex;
+set
 
-justify-content:center;
+} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
-align-items:center;
+import { firebaseConfig } from "./firebase.js";
 
-height:100vh;
+const app = initializeApp(firebaseConfig);
 
-}
+const db = getDatabase(app);
 
-.card{
+const speedText = document.getElementById("speed");
 
-width:360px;
+const joystick = nipplejs.create({
 
-background:white;
+zone: document.getElementById("zone"),
 
-padding:30px;
+mode:"static",
 
-border-radius:20px;
+position:{
 
-text-align:center;
+left:"50%",
 
-box-shadow:0px 10px 30px rgba(0,0,0,.4);
+top:"50%"
 
-}
+},
 
-#zone{
+color:"blue"
 
-width:250px;
+});
 
-height:250px;
+joystick.on("move",(evt,data)=>{
 
-margin:auto;
+if(!data)return;
 
-background:#ececec;
+let x=data.vector.x;
 
-border-radius:50%;
+let speed=Math.round(x*100);
 
-}
+if(speed>100)speed=100;
 
-h1{
+if(speed<-100)speed=-100;
 
-margin-top:0;
+speedText.innerHTML=speed;
 
-}
+set(ref(db,"servo"),{
 
-h2{
+speed:speed
 
-font-size:60px;
+});
 
-color:#1976D2;
+});
 
-margin:20px;
+joystick.on("end",()=>{
 
-}
+speedText.innerHTML=0;
+
+set(ref(db,"servo"),{
+
+speed:0
+
+});
+
+});
