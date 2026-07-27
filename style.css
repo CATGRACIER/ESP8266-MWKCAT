@@ -1,65 +1,79 @@
 body{
-
-margin:0;
-
-background:#1d1f27;
-
-font-family:Arial;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-height:100vh;
-
+  margin:0;
+  background:#1d1f27;
+  font-family:Arial;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
 }
-
 .card{
-
-width:360px;
-
-background:white;
-
-padding:30px;
-
-border-radius:20px;
-
-text-align:center;
-
-box-shadow:0px 10px 30px rgba(0,0,0,.4);
-
+  width:360px;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0px 10px 30px rgba(0,0,0,.4);
 }
-
-#zone{
-
-width:250px;
-
-height:250px;
-
-margin:auto;
-
-background:#ececec;
-
-border-radius:50%;
-
-position: relative;
-
-}
-
 h1{
-
-margin-top:0;
-
+  margin-top:0;
+}
+h2{
+  font-size:60px;
+  color:#1976D2;
+  margin:20px;
 }
 
-h2{
+/* ---- Tabs ---- */
+.tabs{
+  display:flex;
+  gap:8px;
+  margin-bottom:20px;
+}
+.tab-btn{
+  flex:1;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  background:#ececec;
+  font-size:14px;
+  cursor:pointer;
+  color:#555;
+}
+.tab-btn.active{
+  background:#1976D2;
+  color:white;
+}
 
-font-size:60px;
+/* ---- Panels ---- */
+.panel{}
+#zone{
+  width:250px;
+  height:250px;
+  margin:auto;
+  background:#ececec;
+  border-radius:50%;
+  position:relative;
+}
+.hint{
+  color:#777;
+  font-size:13px;
+  margin-top:12px;
+}
 
-color:#1976D2;
-
-margin:20px;
-
+/* ---- Tilt action buttons ---- */
+.action-btn{
+  width:100%;
+  padding:16px;
+  font-size:15px;
+  font-weight:bold;
+  border:none;
+  border-radius:12px;
+  background:#1976D2;
+  color:white;
+  cursor:pointer;
+  margin-bottom:8px;
+}
+.action-btn.stop{
+  background:#e53935;
 }
