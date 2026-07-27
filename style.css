@@ -61,7 +61,7 @@ h2{
   margin-top:12px;
 }
 
-/* ---- Tilt action buttons ---- */
+/* ---- Action buttons (shared) ---- */
 .action-btn{
   width:100%;
   padding:16px;
@@ -75,5 +75,34 @@ h2{
   margin-bottom:8px;
 }
 .action-btn.stop{
+  background:#e53935;
+}
+
+/* ---- Voice control ---- */
+.voice-control{
+  margin-top:20px;
+  padding-top:16px;
+  border-top:1px solid #eee;
+}
+.action-btn.voice{
+  background:#7b1fa2;
+}
+.action-btn.voice.listening{
+  background:#d32f2f;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse{
+  0%{opacity:1;}
+  50%{opacity:0.6;}
+  100%{opacity:1;}
+}
+
+/* ---- Logout ---- */
+.logout-section{
+  margin-top:16px;
+  padding-top:16px;
+  border-top:1px solid #eee;
+}
+.action-btn.logout{
   background:#e53935;
 }
