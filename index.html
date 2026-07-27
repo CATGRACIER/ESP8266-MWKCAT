@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="th">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>CAT Servo Controller</title>
-
 <link rel="stylesheet" href="style.css">
-
 <script src="https://cdn.jsdelivr.net/npm/nipplejs@0.10.2/dist/nipplejs.min.js"></script>
-
 </head>
-
 <body>
-
 <div class="card">
+  <h1>CAT Servo Controller</h1>
 
-<h1>CAT Servo Controller</h1>
+  <div class="tabs">
+    <button class="tab-btn active" data-mode="joystick">🕹 Joystick</button>
+    <button class="tab-btn" data-mode="tilt">📱 Tilt</button>
+  </div>
 
-<div id="zone"></div>
+  <div id="joystickPanel" class="panel">
+    <div id="zone"></div>
+    <p class="hint">Move joystick left/right</p>
+  </div>
 
-<h2 id="speed">0</h2>
+  <div id="tiltPanel" class="panel" style="display:none;">
+    <button id="startTiltBtn" class="action-btn">เริ่มควบคุมด้วยการเอียง</button>
+    <button id="stopTiltBtn" class="action-btn stop" style="display:none;">⏹ หยุด</button>
+    <p class="hint" id="tiltHint">ถือมือถือแนวนอน แล้วเอียงซ้าย-ขวา</p>
+  </div>
 
-<p>Move joystick left/right</p>
-
+  <h2 id="speed">0</h2>
 </div>
 
 <script type="module" src="script.js"></script>
-
 </body>
-
 </html>
